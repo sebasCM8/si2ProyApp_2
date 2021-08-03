@@ -13,6 +13,8 @@ class Usuario {
   String _username;
   String _password;
 
+  int _laboratorioId;
+
   Usuario(this._username, this._password, this._id, this._nombre, this._ci,
       this._direccion, this._email, this._telefono, this._fechaNacimiento);
 
@@ -27,7 +29,10 @@ class Usuario {
   String getEmail() =>  this._email;
   String getFechaNacimiento() => this._fechaNacimiento;
   String getTelefono() => this._telefono;
+  int getLabId() => this._laboratorioId;
+
   void setPassword(String pasword) => this._password = pasword;
+
 
   Map<String, dynamic> toMap() {
     Map<String, dynamic> mapa = {
@@ -49,6 +54,7 @@ class Usuario {
     this._nombre = map['name'];
     //this._password = map['password'];
     //this._telefono = map['telefono'];
+    this._laboratorioId = int.parse(map['laboratory_id']);
   }
 
   static Future<Usuario> loginUser(Usuario user) async {

@@ -29,6 +29,10 @@ class _MenuPageState extends State<MenuPage> {
     Navigator.pushNamed(context, 'campaignsPage', arguments: '2');
   }
 
+  void _goReservas(){
+    Navigator.pushNamed(context, 'reservasPage', arguments: _user);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +69,8 @@ class _MenuPageState extends State<MenuPage> {
                   Icons.phone_callback,
                   color: Colors.green,
                 ),
-                title: Text("Reserva")),
+                title: Text("Reserva"),
+                onTap: _goReservas,),
             ListTile(
                 leading: Icon(Icons.book, color: Colors.red),
                 title: Text("Mis facturas"),

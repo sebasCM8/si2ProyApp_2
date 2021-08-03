@@ -8,6 +8,8 @@ import 'package:laboratorio_app2/pages/facturasPages/fafctura_detalle_page.dart'
 import 'package:laboratorio_app2/pages/home_page.dart';
 import 'package:laboratorio_app2/pages/login_pages/login_page.dart';
 import 'package:laboratorio_app2/pages/menu_page.dart';
+import 'package:laboratorio_app2/pages/reservasPage/nuevaReservaPage.dart';
+import 'package:laboratorio_app2/pages/reservasPage/reservasPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,7 +33,9 @@ class MyApp extends StatelessWidget {
         'analisisPage': (context)=>AnalisisPage(user: ModalRoute.of(context).settings.arguments,),
         'campaignsPage': (context) => Campanias(id:ModalRoute.of(context).settings.arguments),
         'campaignTestsPage': (context) => Tests(idCampania: ModalRoute.of(context).settings.arguments),
-        'analisisDetallePage':(context)=>AnalisisDetallePage(ana: ModalRoute.of(context).settings.arguments)
+        'analisisDetallePage':(context)=>AnalisisDetallePage(ana: ModalRoute.of(context).settings.arguments),
+        'reservasPage':(context)=>ReservasPage(usu: ModalRoute.of(context).settings.arguments),
+        'nuevaReservaPage':(context)=>NuevaReservaPage(usu: ModalRoute.of(context).settings.arguments)
       },
     );
   }
